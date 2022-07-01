@@ -1,0 +1,23 @@
+﻿- Hash tables give us fast lookups.
+- They have many applications, for exemple in compilers when we want to find an address for a specific function.
+- In C#, Hash tables are called Dictionary.
+- Hash tables are key-value stores, meaning that we will return a specific value, if we first provide a key.
+- How does this retrieval works? When we provide a key, this key will go through a hash function, which we retrieve us the memory location where our value is stored.
+- This hash function is deterministic, which means that the same input key will generate the same index at which our value is located.
+- The operations we can perform at a hash table are: Insertion (which is O(1)), Lookup (which is O(1)) and Deletion (which is also O(1)).
+- The worst case scenario for each of these operations is O(n).
+- As we can see from the above notes, the Hash Table uses arrays under the hood. That's one of the reasons our retrieval is so fast.
+
+### Hashing
+- There are two approaches we can follow when performing key hashing, depending on the type of our key:
+    -> If our key is an int, our hash function can just be using the modulus operator in the size of our array (e.g. if our key is 456 and our array is of size 100, our hash would be 456 % 100 [which would be 56])
+    -> If our key is a string, we can use the ASCII code of each string character, sum it all, and then perform the modulus operation.
+- Normally, our hash tables are projected in a way that we have minimal collisions, so we can have maximum performance.
+- One cool aspect to note is that, in C#, every object has a GetHashCode method, which will return the hash value of the object it acts upon.
+- There is a specific problem with the hash functions. Since we have limited memory space and unlimited key possibilities, when we perform our hashing, we will have what is known as a collision.
+- A collision happens when two different keys have the same hash value. What will we do in this scenario?
+- In order to solve this collision, we have two main strategies:
+    -> Chaining: Our array is an array of linked lists, and whenever we have a collision in a specific index, we just add the collided item in the linked list. This means that, if we have too many collisions, we can handle them softly.
+    -> Open Addressing: This means that our final element position will not be determined by the initial hashing. (in reality it indirectly determined). Here there are many strategies, from which:
+        > Linear Probing: Whenever we have a collision, we will search every slot, starting from the determined index by the hashing, in a linear fashion. When we find an empty slot, we store our value there.
+        > Quadratic Probing: The approach is similar to the one presented in the Linear Probing, but instead of doing a linear search to find an empty slot, we do a quadratic search.

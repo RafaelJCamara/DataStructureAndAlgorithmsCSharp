@@ -1,0 +1,15 @@
+/Users/rafaelcamara/Documents/Learning/DataStructureAndAlgorithmsCSharp/DSA/DSA/bin/Debug/net6.0/DSA
+/Users/rafaelcamara/Documents/Learning/DataStructureAndAlgorithmsCSharp/DSA/DSA/bin/Debug/net6.0/DSA.deps.json
+/Users/rafaelcamara/Documents/Learning/DataStructureAndAlgorithmsCSharp/DSA/DSA/bin/Debug/net6.0/DSA.runtimeconfig.json
+/Users/rafaelcamara/Documents/Learning/DataStructureAndAlgorithmsCSharp/DSA/DSA/bin/Debug/net6.0/DSA.dll
+/Users/rafaelcamara/Documents/Learning/DataStructureAndAlgorithmsCSharp/DSA/DSA/bin/Debug/net6.0/DSA.pdb
+/Users/rafaelcamara/Documents/Learning/DataStructureAndAlgorithmsCSharp/DSA/DSA/obj/Debug/net6.0/DSA.csproj.AssemblyReference.cache
+/Users/rafaelcamara/Documents/Learning/DataStructureAndAlgorithmsCSharp/DSA/DSA/obj/Debug/net6.0/DSA.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rafaelcamara/Documents/Learning/DataStructureAndAlgorithmsCSharp/DSA/DSA/obj/Debug/net6.0/DSA.AssemblyInfoInputs.cache
+/Users/rafaelcamara/Documents/Learning/DataStructureAndAlgorithmsCSharp/DSA/DSA/obj/Debug/net6.0/DSA.AssemblyInfo.cs
+/Users/rafaelcamara/Documents/Learning/DataStructureAndAlgorithmsCSharp/DSA/DSA/obj/Debug/net6.0/DSA.csproj.CoreCompileInputs.cache
+/Users/rafaelcamara/Documents/Learning/DataStructureAndAlgorithmsCSharp/DSA/DSA/obj/Debug/net6.0/DSA.dll
+/Users/rafaelcamara/Documents/Learning/DataStructureAndAlgorithmsCSharp/DSA/DSA/obj/Debug/net6.0/refint/DSA.dll
+/Users/rafaelcamara/Documents/Learning/DataStructureAndAlgorithmsCSharp/DSA/DSA/obj/Debug/net6.0/DSA.pdb
+/Users/rafaelcamara/Documents/Learning/DataStructureAndAlgorithmsCSharp/DSA/DSA/obj/Debug/net6.0/DSA.genruntimeconfig.cache
+/Users/rafaelcamara/Documents/Learning/DataStructureAndAlgorithmsCSharp/DSA/DSA/obj/Debug/net6.0/ref/DSA.dll
