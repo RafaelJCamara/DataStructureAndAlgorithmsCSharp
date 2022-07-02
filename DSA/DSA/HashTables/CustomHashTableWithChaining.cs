@@ -21,6 +21,9 @@ namespace DSA.HashTables
             for(int i = 0; i != ArraySize; i++) _dictionary[i] = new LinkedList<Entry>();
         }
 
+        /*
+            Time complexity: O(1)
+         */
         public void Add(int key, string value)
         {
             int index = Hash(key);
@@ -42,6 +45,10 @@ namespace DSA.HashTables
             });
         }
 
+        /*
+            Time complexity: Vast majority of times is O(1).
+                             Will depend on the hash algorithm. If our hash algo is bad, we will have many collision, thus this complexity may vary.
+         */
         public string Get(int key)
         {
             int index = Hash(key);
@@ -53,6 +60,10 @@ namespace DSA.HashTables
             throw new Exception("Key not found!");
         }
 
+        /*
+            Time complexity: Vast majority of times is O(1).
+                             Will depend on the hash algorithm. If our hash algo is bad, we will have many collision, thus this complexity may vary.
+        */
         public bool ContainsKey(int key)
         {
             int index = Hash(key);
@@ -67,6 +78,10 @@ namespace DSA.HashTables
             return false;
         }
 
+        /*
+            Time complexity: Vast majority of times is O(1).
+                             Will depend on the hash algorithm. If our hash algo is bad, we will have many collision, thus this complexity may vary.
+        */
         public void Remove(int key)
         {
             int index = Hash(key);
@@ -75,6 +90,10 @@ namespace DSA.HashTables
             var wasRemoved = entryList.Remove(entryList.First(entry => entry.Key == key));
         }
 
+        /*
+            Time complexity: Vast majority of times is O(1).
+                             Will depend on the hash algorithm. If our hash algo is bad, we will have many collision, thus this complexity may vary.
+        */
         public Entry GetEntryForKey(int key)
         {
             int index = Hash(key);
