@@ -7,6 +7,12 @@ namespace DSA.HashTables
             We are using the chaining method to resolve collisions
          */
         private LinkedList<Entry>[] _dictionary;
+        public LinkedList<Entry>[] Dictionary {
+            get
+            {
+                return _dictionary;
+            }
+        }
         private const int ArraySize = 100;
 
         public CustomHashTableWithChaining()
@@ -69,7 +75,18 @@ namespace DSA.HashTables
             var wasRemoved = entryList.Remove(entryList.First(entry => entry.Key == key));
         }
 
-        private int Hash(int key)
+        public Entry GetEntryForKey(int key)
+        {
+            int index = Hash(key);
+            var entryList = _dictionary[index];
+            foreach (var entry in entryList)
+            {
+                if (entry.Key == key) return entry;
+            }
+            throw new Exception("Key not found!");
+        }
+
+        public int Hash(int key)
         {
             return key % ArraySize;
         }
