@@ -1,21 +1,23 @@
 ﻿<Properties StartupConfiguration="{57239B60-7AC8-40FA-AD76-35550B3FA819}|Default">
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.DSA PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="DSA/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DSA/HashTables/Tests/CustomHashTableWithChainingTests.cs">
     <Files>
-      <File FileName="DSA/Program.cs" Line="10" Column="39" />
-      <File FileName="DSA/HashTables/CustomHashTableWithChaining.cs" Line="28" Column="16" />
+      <File FileName="DSA/HashTables/CustomHashTableWithChaining.cs" Line="39" Column="26" />
+      <File FileName="DSA/HashTables/Tests/CustomHashTableWithChainingTests.cs" Line="8" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="DSA" expanded="True">
+          <Node name="DSA" expanded="True" selected="True">
             <Node name="DSA" expanded="True">
-              <Node name="HashTables" expanded="True" />
+              <Node name="HashTables" expanded="True">
+                <Node name="Tests" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
