@@ -4,19 +4,19 @@ namespace DSA.HashTables
     public class CustomHashTable
     {
 
-        private object[] _dictionary;
+        private string[] _dictionary;
 
         public CustomHashTable()
         {
-            this._dictionary = new object[100];
+            this._dictionary = new string[100];
         }
 
-        public void Add(int key, object obejct)
+        public void Add(int key, string value)
         {
 
         }
 
-        public object Get(int key)
+        public string Get(int key)
         {
 
         }
