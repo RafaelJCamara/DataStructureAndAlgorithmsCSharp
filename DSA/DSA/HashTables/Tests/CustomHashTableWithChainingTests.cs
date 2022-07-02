@@ -79,13 +79,6 @@ namespace DSA.HashTables.Tests
         }
 
         [Theory]
-        [InlineData(1, "one")]
-        public void Add_AddsKeyAndValueSpecifiedUsingMoq(int key, string value)
-        {
-
-        }
-
-        [Theory]
         [InlineData(1)]
         public void Remove_RemovesEntryForSpecifiedKey(int key)
         {
@@ -118,28 +111,6 @@ namespace DSA.HashTables.Tests
 
             //Assert
             Assert.Throws<InvalidOperationException>(() => hashTable.Remove(key));
-        }
-
-        [Theory]
-        [InlineData(1)]
-        public void Remove_RemovesEntryForSpecifiedKeyUsingMoq(int key)
-        {
-            //Arrange
-            var hashTable = new CustomHashTableWithChaining();
-            var index = hashTable.Hash(key);
-            hashTable.Add(key, "");
-            var currentEntryListCountBeforeDeletion = hashTable.Dictionary[index].Count;
-            var expectedEntryListCountAfterDeletion = currentEntryListCountBeforeDeletion - 1;
-            var expectedErrorMessage = "Key not found!";
-
-            //Act
-            hashTable.Remove(key);
-            var currentEntryListCountAfterDeletion = hashTable.Dictionary[index].Count;
-
-            //Assert
-            Assert.Equal(expectedEntryListCountAfterDeletion, currentEntryListCountAfterDeletion);
-            var exception = Assert.Throws<Exception>(() => hashTable.Get(key));
-            Assert.Equal(expectedErrorMessage, exception.Message);
         }
 
         [Theory]
