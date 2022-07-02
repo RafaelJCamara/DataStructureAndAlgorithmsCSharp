@@ -12,16 +12,24 @@ namespace DSA.HashTables
         public CustomHashTableWithChaining()
         {
             this._dictionary = new LinkedList<Entry>[ArraySize];
-            for(int i = 0; i != ArraySize; i++)
-            {
-                _dictionary[i] = new LinkedList<Entry>();
-            }
+            for(int i = 0; i != ArraySize; i++) _dictionary[i] = new LinkedList<Entry>();
         }
 
         public void Add(int key, string value)
         {
             int index = Hash(key);
-            _dictionary[index].AddLast(new Entry
+
+            var entryList = _dictionary[index];
+
+            foreach(var entry in entryList)
+            {
+                /*
+                    If we insert the same key twice, we want to update the existing value, and not generate a duplicate entry with the same key and different values.
+                 */
+                if (entry.Key == key) entry.Value = value;
+            }
+
+            entryList.AddLast(new Entry
             {
                 Key = key,
                 Value = value
@@ -41,12 +49,24 @@ namespace DSA.HashTables
 
         public bool ContainsKey(int key)
         {
-            throw new NotImplementedException();
+            int index = Hash(key);
+            var entryList = _dictionary[index];
+            foreach (var entry in entryList)
+            {
+                if (entry.Key == key)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public void Remove(int key)
         {
-
+            int index = Hash(key);
+            var entryList =_dictionary[index];
+            //Will throw InvalidOperation exception if key does not exists
+            var wasRemoved = entryList.Remove(entryList.First(entry => entry.Key == key));
         }
 
         private int Hash(int key)

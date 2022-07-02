@@ -13,6 +13,12 @@ namespace DSA
             Console.WriteLine(hashTable.Get(0));
             Console.WriteLine(hashTable.Get(1));
             Console.WriteLine(hashTable.Get(100));
+            Console.WriteLine(hashTable.ContainsKey(0));
+            Console.WriteLine(hashTable.ContainsKey(100));
+            Console.WriteLine(hashTable.ContainsKey(56));
+            hashTable.Remove(0);
+            Console.WriteLine(hashTable.ContainsKey(0));
+            hashTable.Remove(56);
         }
     }
 }
