@@ -1,0 +1,3 @@
+﻿- Stack is data strucutre that is LIFO (Last In First Out), which means that the items that are inserted last are the first ones to be removed.
+- It can be implemented using Arrays or Linked Lists.
+- All operations run in O(1).

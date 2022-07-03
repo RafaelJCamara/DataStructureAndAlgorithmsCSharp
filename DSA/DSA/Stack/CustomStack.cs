@@ -10,6 +10,10 @@ namespace DSA.Stack
     {
         private int[] _stack;
         private int current = -1;
+        public int Current
+        {
+            get { return current; }
+        }
         public const int StackSize = 100;
         public int[] ItemStack
         {
