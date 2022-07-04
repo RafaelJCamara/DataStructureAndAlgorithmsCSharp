@@ -1,0 +1,3 @@
+﻿- Unlike stacks, queues are FIFO (First In First Out), meaning tha the first item to be inserted in the queue is the first to get out of it.
+- We can think of a real world scenario, e.g. in a supermarket when paying out, we join the queue from the back and leave it from the front.
+- There are other real world scenarios where queues are applicable, for example in web servers or live support systems, where we are interested in serving requests in the order they came.
