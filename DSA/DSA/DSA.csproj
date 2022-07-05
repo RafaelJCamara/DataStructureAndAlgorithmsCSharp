@@ -10,11 +10,13 @@
 
   <ItemGroup>
     <None Remove="xunit" />
+    <None Remove="Queues\PriorityQueues\" />
   </ItemGroup>
   
   <ItemGroup>
     <Folder Include="HashTables\" />
     <Folder Include="HashTables\Tests\" />
+    <Folder Include="Queues\PriorityQueues\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
