@@ -1,6 +1,7 @@
 ﻿using System;
 using DSA.HashTables;
 using DSA.Queues.PriorityQueues;
+using DSA.Trees.BinarySearchTree;
 
 namespace DSA
 {
@@ -22,6 +23,7 @@ namespace DSA
             Console.WriteLine(hashTable.ContainsKey(0));
             hashTable.Remove(56);
             */
+            /*
             var priorityQueue = new PriorityQueue<string, int>(new ElementComparer());
             priorityQueue.Enqueue("A", 4);
             priorityQueue.Enqueue("B", 1);
@@ -32,6 +34,16 @@ namespace DSA
             {
                 Console.WriteLine($"Popped Item : {item}. Priority Was : {priority}");
             }
+            */
+
+            var bst = new BST();
+            bst.Insert(6);
+            bst.Insert(4);
+            bst.Insert(10);
+            bst.Insert(1);
+            bst.Insert(5);
+            bst.Insert(8);
+            bst.Insert(15);
         }
     }
 }
