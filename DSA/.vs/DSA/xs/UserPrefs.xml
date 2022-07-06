@@ -1,17 +1,12 @@
 ﻿<Properties StartupConfiguration="{57239B60-7AC8-40FA-AD76-35550B3FA819}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.DSA PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="DSA/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DSA/Queues/PriorityQueues/ElementComparer.cs">
     <Files>
       <File FileName="DSA/HashTables/Tests/CustomHashTableWithChainingTests.cs" Line="7" Column="6" />
       <File FileName="DSA/Program.cs" Line="1" Column="1" />
       <File FileName="DSA/HashTables/IHashTable.cs" Line="1" Column="1" />
       <File FileName="DSA/HashTables/Entry.cs" Line="1" Column="1" />
       <File FileName="DSA/HashTables/CustomHashTableWithChaining.cs" Line="1" Column="1" />
+      <File FileName="DSA/Queues/PriorityQueues/ElementComparer.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,7 +16,12 @@
               <Node name="HashTables" expanded="True">
                 <Node name="Tests" expanded="True" />
               </Node>
-              <Node name="Program.cs" selected="True" />
+              <Node name="LinkedList" expanded="True" />
+              <Node name="Queues" expanded="True">
+                <Node name="PriorityQueues" expanded="True">
+                  <Node name="ElementComparer.cs" selected="True" />
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>
@@ -29,7 +29,18 @@
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State />
       </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="DSA" expanded="True" selected="True" />
+        </State>
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.DSA PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
