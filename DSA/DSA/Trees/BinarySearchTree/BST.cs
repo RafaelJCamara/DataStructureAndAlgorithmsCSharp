@@ -37,5 +37,20 @@ namespace DSA.Trees.BinarySearchTree
             }
         }
 
+        /*
+            Time complexity: O(log(n))
+        */
+        public bool Find(int value)
+        {
+            return Root == null ? false : Find(Root, value);
+        }
+
+        private bool Find(TreeNode root, int value)
+        {
+            if (root == null) return false;
+            if (root.Value == value) return true;
+            return root.Value > value ? Find(root.Left, value) : Find(root.Left, value);
+        }
+
     }
 }

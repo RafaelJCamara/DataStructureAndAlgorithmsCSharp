@@ -44,6 +44,10 @@ namespace DSA
             bst.Insert(5);
             bst.Insert(8);
             bst.Insert(15);
+
+            Console.WriteLine(bst.Find(6));
+            Console.WriteLine(bst.Find(19));
+
         }
     }
 }
