@@ -24,24 +24,17 @@ namespace DSA.Trees.BinarySearchTree
         private void Insert(TreeNode root, int value)
         {
             if (Root.Value == value) throw new InvalidOperationException("Can't have duplicated values.");
-            if (value < root.Value && root.Left == null)
+            var newNode = new TreeNode { Value = value };
+            if (value < root.Value)
             {
-                root.Left = new TreeNode
-                {
-                    Value = value
-                };
-                return;
+                if (root.Left == null) root.Left = newNode;
+                else Insert(root.Left, value);
             }
-            else if (value > root.Value && root.Right == null)
+            else if (value > root.Value )
             {
-                root.Right = new TreeNode
-                {
-                    Value = value
-                };
-                return;
+                if (root.Right == null) root.Right = newNode;
+                else Insert(root.Right, value);
             }
-            if (value < root.Value) Insert(root.Left, value);
-            else Insert(root.Right, value);
         }
 
     }
