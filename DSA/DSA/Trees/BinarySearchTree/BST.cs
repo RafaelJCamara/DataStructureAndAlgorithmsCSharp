@@ -52,5 +52,44 @@ namespace DSA.Trees.BinarySearchTree
             return root.Value > value ? Find(root.Left, value) : Find(root.Left, value);
         }
 
+        public void PreOrderTraversal()
+        {
+            PreOrderTraversal(Root);
+        }
+
+        private void PreOrderTraversal(TreeNode root)
+        {
+            if (root == null) return;
+            Console.WriteLine(root.Value);
+            PreOrderTraversal(root.Left);
+            PreOrderTraversal(root.Right);
+        }
+
+        public void InOrderTraversal()
+        {
+            InOrderTraversal(Root);
+        }
+
+        private void InOrderTraversal(TreeNode root)
+        {
+            if (root == null) return;
+            InOrderTraversal(root.Left);
+            Console.WriteLine(root.Value);
+            InOrderTraversal(root.Right);
+        }
+
+        public void PostOrderTraversal()
+        {
+            PostOrderTraversal(Root);
+        }
+
+        private void PostOrderTraversal(TreeNode root)
+        {
+            if (root == null) return;
+            PostOrderTraversal(root.Left);
+            PostOrderTraversal(root.Right);
+            Console.WriteLine(root.Value);
+        }
+
     }
 }

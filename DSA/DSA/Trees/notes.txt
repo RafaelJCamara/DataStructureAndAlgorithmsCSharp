@@ -9,3 +9,10 @@
     -> Lookup: Time complexity of O(log(n))
     -> Insert: Time complexity of O(log(n))
     -> Delete: Time complexity of O(log(n))
+- There are two ways of of traversing a tree: breadth first and depth first.
+- Breadth first approach is also called Level Order traversal, because you visit each level of the tree at a time.
+- In depth first approach, we have 3 ways of doing so:
+    -> Pre-order traversal: Root, Left, Right
+    -> In-order traversal: Left, Root, Right
+    -> Post-order traversal: Left, Right, Root
+- It is called in depth traversal because we start at the root node and go deep down to it's children and grandchildren.
