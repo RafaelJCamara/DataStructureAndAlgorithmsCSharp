@@ -42,7 +42,7 @@ namespace DSA
             bst.Insert(3);
             bst.Insert(8);
             bst.Insert(1);
-            bst.Insert(2);
+            bst.Insert(4);
             bst.Insert(7);
             bst.Insert(9);
             bst.Insert(17);
@@ -52,7 +52,11 @@ namespace DSA
             bst.Insert(20);
             bst.Insert(18);
             bst.Insert(21);
-            Console.WriteLine(bst.Height());
+            var nodeList = bst.GetNodesAtDistanceFromRoot(-1);
+            foreach (var value in nodeList)
+            {
+                Console.WriteLine(value);
+            }
         }
     }
 }

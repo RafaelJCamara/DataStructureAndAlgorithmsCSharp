@@ -103,5 +103,26 @@ namespace DSA.Trees.BinarySearchTree
             return 1 + Math.Max(Height(root.Left), Height(root.Right));
         }
 
+        public List<int> GetNodesAtDistanceFromRoot(int distance)
+        {
+            if (distance < 0) throw new ArgumentException("Please insert distance from 0 onwards!");
+            if(Root==null) throw new InvalidOperationException("There are no nodes!");
+            var nodeList = new List<int>();
+            GetNodesAtDistanceFromRoot(Root, distance, nodeList);
+            return nodeList;
+        }
+
+        private void GetNodesAtDistanceFromRoot(TreeNode root, int distance, List<int> currentNodes)
+        {
+            if (root == null) return;
+            if (distance == 0)
+            {
+                currentNodes.Add(root.Value);
+                return;
+            }
+            GetNodesAtDistanceFromRoot(root.Left, distance -1, currentNodes);
+            GetNodesAtDistanceFromRoot(root.Right, distance - 1, currentNodes);
+        }
+
     }
 }
