@@ -1,26 +1,18 @@
 ﻿<Properties StartupConfiguration="{57239B60-7AC8-40FA-AD76-35550B3FA819}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="DSA/Queues/PriorityQueues/ElementComparer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DSA/Trees/BinarySearchTree/BST.cs">
     <Files>
-      <File FileName="DSA/HashTables/Tests/CustomHashTableWithChainingTests.cs" Line="7" Column="6" />
-      <File FileName="DSA/Program.cs" Line="1" Column="1" />
-      <File FileName="DSA/HashTables/IHashTable.cs" Line="1" Column="1" />
-      <File FileName="DSA/HashTables/Entry.cs" Line="1" Column="1" />
-      <File FileName="DSA/HashTables/CustomHashTableWithChaining.cs" Line="1" Column="1" />
-      <File FileName="DSA/Queues/PriorityQueues/ElementComparer.cs" Line="1" Column="1" />
+      <File FileName="DSA/Trees/BinarySearchTree/BST.cs" Line="126" Column="1" IsPinned="True" />
+      <File FileName="DSA/Trees/notes.txt" Line="1" Column="1" IsPinned="True" />
+      <File FileName="DSA/Trees/BinarySearchTree/TreeNode.cs" Line="10" Column="2" />
+      <File FileName="DSA/Program.cs" Line="61" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="DSA" expanded="True">
             <Node name="DSA" expanded="True">
-              <Node name="HashTables" expanded="True">
-                <Node name="Tests" expanded="True" />
-              </Node>
-              <Node name="LinkedList" expanded="True" />
-              <Node name="Queues" expanded="True">
-                <Node name="PriorityQueues" expanded="True">
-                  <Node name="ElementComparer.cs" selected="True" />
-                </Node>
+              <Node name="Trees" expanded="True">
+                <Node name="BinarySearchTree" expanded="True" />
               </Node>
             </Node>
           </Node>

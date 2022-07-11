@@ -59,6 +59,7 @@ namespace DSA
                 Console.WriteLine(value);
             }
             */
+            Console.WriteLine(bst.Height());
             bst.LevelOrderTraversal();
         }
     }
