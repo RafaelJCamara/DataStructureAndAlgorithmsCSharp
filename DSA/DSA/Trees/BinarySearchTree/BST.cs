@@ -91,6 +91,18 @@ namespace DSA.Trees.BinarySearchTree
             Console.WriteLine(root.Value);
         }
 
+        public void LevelOrderTraversal()
+        {
+            for(int i = 0; i <= Height();i++)
+            {
+                var nodes = GetNodesAtDistanceFromRoot(i);
+                foreach(var value in nodes)
+                {
+                    Console.WriteLine($"Level {i}: {value}");
+                }
+            }
+        }
+
         public int Height()
         {
             if (Root == null) throw new InvalidOperationException("There are no nodes!");

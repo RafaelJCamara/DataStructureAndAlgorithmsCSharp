@@ -52,11 +52,14 @@ namespace DSA
             bst.Insert(20);
             bst.Insert(18);
             bst.Insert(21);
-            var nodeList = bst.GetNodesAtDistanceFromRoot(-1);
+            /*
+            var nodeList = bst.GetNodesAtDistanceFromRoot(2);
             foreach (var value in nodeList)
             {
                 Console.WriteLine(value);
             }
+            */
+            bst.LevelOrderTraversal();
         }
     }
 }
