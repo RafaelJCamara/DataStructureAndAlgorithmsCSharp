@@ -16,3 +16,6 @@
     -> In-order traversal: Left, Root, Right
     -> Post-order traversal: Left, Right, Root
 - It is called in depth traversal because we start at the root node and go deep down to it's children and grandchildren.
+- There are two important properties in trees:
+    -> Depth: We start counting from the root until we reach a leaf. For each edge we go through, we add a new "level" in the depth count. Root nodes have 0 depth.
+    -> Height: We start counting from the leaf nodes until we reach thee root node. Whenever we go through a edge, we add a new "level" in the height count. The height of the root node is also called the "height of the tree". There is a formula to calculate the height which is 1+max(height(L),height(R))

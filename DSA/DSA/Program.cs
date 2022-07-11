@@ -37,14 +37,22 @@ namespace DSA
             */
 
             var bst = new BST();
-            bst.Insert(7);
-            bst.Insert(4);
-            bst.Insert(1);
-            bst.Insert(6);
-            bst.Insert(9);
-            bst.Insert(8);
             bst.Insert(10);
-            bst.PostOrderTraversal();
+            bst.Insert(6);
+            bst.Insert(3);
+            bst.Insert(8);
+            bst.Insert(1);
+            bst.Insert(2);
+            bst.Insert(7);
+            bst.Insert(9);
+            bst.Insert(17);
+            bst.Insert(14);
+            bst.Insert(13);
+            bst.Insert(15);
+            bst.Insert(20);
+            bst.Insert(18);
+            bst.Insert(21);
+            Console.WriteLine(bst.Height());
         }
     }
 }

@@ -91,5 +91,17 @@ namespace DSA.Trees.BinarySearchTree
             Console.WriteLine(root.Value);
         }
 
+        public int Height()
+        {
+            if (Root == null) throw new InvalidOperationException("There are no nodes!");
+            return Height(Root);
+        }
+
+        private int Height(TreeNode root)
+        {
+            if (root==null || root.Left == null && root.Right == null) return 0;
+            return 1 + Math.Max(Height(root.Left), Height(root.Right));
+        }
+
     }
 }
