@@ -36,6 +36,49 @@ namespace DSA.Trees.BinarySearchTree.Tests
         }
 
         //GetNodesAtDistanceFromRoot
+        [Theory]
+        [MemberData(nameof(TestNodesAtDistanceFromRootData))]
+        public void GetNodesAtDistanceFromRoot_ReturnsListOfNodeAtGivenDistance(List<int> elementsToInsert, int distance, List<int> expectedNodesAtDistance)
+        {
+            //Arrange
+            var bst = new BST();
+            foreach (var element in elementsToInsert) bst.Insert(element);
+
+            //Act
+            var elementsAtDistance = bst.GetNodesAtDistanceFromRoot(distance);
+
+            //Assert
+            Assert.Equal(expectedNodesAtDistance, elementsAtDistance);
+        }
+
+        [Fact]
+        public void GetNodesAtDistanceFromRoot_ThrowsExceptionWhenRootNull()
+        {
+            //Arrange
+            var bst = new BST();
+            var expectedExceptionMessage = "There are no nodes!";
+
+            //Act
+
+            //Assert
+            var exception = Assert.Throws<InvalidOperationException>(() => bst.GetNodesAtDistanceFromRoot(0));
+            Assert.Equal(expectedExceptionMessage, exception.Message);
+        }
+
+        [Fact]
+        public void GetNodesAtDistanceFromRoot_ThrowsExceptionWhenDistanceIsLessThanZero()
+        {
+            //Arrange
+            var bst = new BST();
+            bst.Insert(10);
+            var expectedExceptionMessage = "Please insert distance from 0 onwards!";
+
+            //Act
+
+            //Assert
+            var exception = Assert.Throws<ArgumentException>(() => bst.GetNodesAtDistanceFromRoot(-1));
+            Assert.Equal(expectedExceptionMessage, exception.Message);
+        }
 
         //Find
         [Theory]
@@ -90,6 +133,23 @@ namespace DSA.Trees.BinarySearchTree.Tests
                             new object[] { values2, 14, true},
                             new object[] { values3, 25, false},
                             new object[] { values4, 10, true}
+                        };
+            }
+        }
+        public static IEnumerable<object[]> TestNodesAtDistanceFromRootData
+        {
+            get
+            {
+                var values1 = new List<int> { 10, 6, 3, 8, 1, 4, 7, 9, 17, 14, 13, 15, 20, 18, 21 };
+                var values2 = new List<int> { 10, 6, 3, 8, 17, 14, 20 };
+                var values3 = new List<int> { 10, 6, 17 };
+                var values4 = new List<int> { 10 };
+                return new List<object[]>
+                        {
+                            new object[] { values1, 3, new List<int> { 1, 4, 7, 9, 13, 15, 18, 21}},
+                            new object[] { values2, 2, new List<int> { 3, 8, 14, 20}},
+                            new object[] { values3, 1, new List<int> { 6, 17}},
+                            new object[] { values4, 0, new List<int> { 10 } }
                         };
             }
         }
