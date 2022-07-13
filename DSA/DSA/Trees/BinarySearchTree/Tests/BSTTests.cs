@@ -96,8 +96,6 @@ namespace DSA.Trees.BinarySearchTree.Tests
             Assert.Equal(expectedResult, found);
         }
 
-        //Insert
-
         public static IEnumerable<object[]> TestHeightOfTreeData
         {
             get
