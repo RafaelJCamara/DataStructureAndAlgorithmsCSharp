@@ -49,7 +49,7 @@ namespace DSA.Trees.BinarySearchTree
         {
             if (root == null) return false;
             if (root.Value == value) return true;
-            return root.Value > value ? Find(root.Left, value) : Find(root.Left, value);
+            return root.Value > value ? Find(root.Left, value) : Find(root.Right, value);
         }
 
         public void PreOrderTraversal()
