@@ -1,0 +1,6 @@
+﻿A heap is a special type of tree with two properties:
+1 - Complete: This property indicates that every level of our tree is filled (exception made to the last level), and nodes are inserted from the left to the right.
+2 - Heap property: Every value in the child nodes is equal or lower than the root node.
+    - There are two types of heaps here:
+        - Min heap: where the root node holds the lowest value.
+        - Max heap: where the root node holds the highest value.
