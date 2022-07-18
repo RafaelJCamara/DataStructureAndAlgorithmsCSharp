@@ -1,5 +1,6 @@
 ﻿using System;
 using DSA.HashTables;
+using DSA.Heaps;
 using DSA.Queues.PriorityQueues;
 using DSA.Trees.BinarySearchTree;
 
@@ -36,6 +37,7 @@ namespace DSA
             }
             */
 
+            /*
             var bst = new BST();
             bst.Insert(10);
             bst.Insert(6);
@@ -52,6 +54,7 @@ namespace DSA
             bst.Insert(20);
             bst.Insert(18);
             bst.Insert(21);
+            */
             /*
             var nodeList = bst.GetNodesAtDistanceFromRoot(2);
             foreach (var value in nodeList)
@@ -59,8 +62,21 @@ namespace DSA
                 Console.WriteLine(value);
             }
             */
+            /*
             Console.WriteLine(bst.Height());
             bst.LevelOrderTraversal();
+            */
+            var heap = new CustomHeap(10);
+            heap.Insert(40);
+            heap.Insert(30);
+            heap.Insert(20);
+            heap.Insert(17);
+            heap.Insert(25);
+            heap.Insert(19);
+            heap.Insert(21);
+            heap.Insert(6);
+            heap.Insert(5);
+            heap.Insert(4);
         }
     }
 }
