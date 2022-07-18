@@ -4,3 +4,8 @@
     - There are two types of heaps here:
         - Min heap: where the root node holds the lowest value.
         - Max heap: where the root node holds the highest value.
+When implementing a heap, we use an array because we know that there are no holes, since items are inserted from left to right.
+    - Due to this, we have a couple of ways of knowing the important indexes:
+        - Left child: left = parent * 2 + 1
+        - Right child: right = parent * 2 + 2
+        - Parent (from a child node): parent = (index - 1)/2
