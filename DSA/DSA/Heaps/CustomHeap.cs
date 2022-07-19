@@ -50,6 +50,59 @@ namespace DSA.Heaps
         }
 
         //remove()
+        public void Remove()
+        {
+            if (Current == -1) throw new InvalidOperationException("Heap is empty!");
+            Heap[0] = Heap[Size - 1];
+            Size -= 1;
+            BubbleDown();
+        }
+
+        public void BubbleDown()
+        {
+            var currentIndex = 0;
+            while(currentIndex<=Size && !IsValidParent(currentIndex))
+            {
+                var largestChildIndex = LargestChildIndex(currentIndex);
+                Swap(largestChildIndex, currentIndex);
+                currentIndex = largestChildIndex;
+            }
+        }
+
+        private bool IsValidParent(int parent)
+        {
+            if (!HasLeftChild(parent)) return true;
+            if (!HasRightChild(parent)) return Heap[parent] >= Heap[LeftChild(parent)];
+            return Heap[parent] >= Heap[LeftChild(parent)] && Heap[parent] >= Heap[RightChild(parent)];
+        }
+
+        private int LeftChild(int parent)
+        {
+            return parent * 2 + 1;
+        }
+
+        private int RightChild(int parent)
+        {
+            return parent * 2 + 2;
+        }
+
+        private int LargestChildIndex(int parent)
+        {
+            if (!HasLeftChild(parent)) return parent;
+            if (!HasRightChild(parent)) return LeftChild(parent);
+            return Heap[LeftChild(parent)] > Heap[RightChild(parent)] ?
+                LeftChild(parent) : RightChild(parent);
+        }
+
+        private bool HasLeftChild(int parent)
+        {
+            return LeftChild(parent) < Size;
+        }
+
+        private bool HasRightChild(int parent)
+        {
+            return RightChild(parent) < Size;
+        }
 
     }
 }

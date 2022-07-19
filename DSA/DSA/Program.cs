@@ -77,6 +77,7 @@ namespace DSA
             heap.Insert(6);
             heap.Insert(5);
             heap.Insert(4);
+            heap.Remove();
         }
     }
 }
