@@ -88,10 +88,10 @@ namespace DSA.Heaps.Tests
             get
             {
                 var valuesInit1 = new int[] { 40, 30, 20, 10 };
-                var valuesFinal1 = new int[] { 30, 10, 20, 0 };
+                var valuesFinal1 = new int[] { 30, 10, 20, 10 };
 
                 var valuesInit2 = new int[] { 40, 30, 20 };
-                var valuesFinal2 = new int[] { 30, 20, 0 };
+                var valuesFinal2 = new int[] { 30, 20, 20 };
 
                 return new List<object[]>
                         {
