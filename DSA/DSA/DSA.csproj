@@ -25,7 +25,6 @@
     <Folder Include="Trees\" />
     <Folder Include="Trees\BinarySearchTree\" />
     <Folder Include="Trees\BinarySearchTree\Tests\" />
-    <Folder Include="Heaps\" />
     <Folder Include="Heaps\Tests\" />
   </ItemGroup>
   <ItemGroup>

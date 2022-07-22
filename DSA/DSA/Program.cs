@@ -66,18 +66,22 @@ namespace DSA
             Console.WriteLine(bst.Height());
             bst.LevelOrderTraversal();
             */
-            var heap = new CustomHeap(10);
-            heap.Insert(40);
-            heap.Insert(30);
-            heap.Insert(20);
-            heap.Insert(17);
-            heap.Insert(25);
-            heap.Insert(19);
-            heap.Insert(21);
-            heap.Insert(6);
-            heap.Insert(5);
-            heap.Insert(4);
-            heap.Remove();
+            //var heap = new CustomHeap(10);
+            //heap.Insert(40);
+            //heap.Insert(30);
+            //heap.Insert(20);
+            //heap.Insert(17);
+            //heap.Insert(25);
+            //heap.Insert(19);
+            //heap.Insert(21);
+            //heap.Insert(6);
+            //heap.Insert(5);
+            //heap.Insert(4);
+            //heap.Remove();
+
+            int[] array = { 10, 20, 30, 40};
+            MaxHeap.Heapify(array);
+            Console.WriteLine("a");
         }
     }
 }
