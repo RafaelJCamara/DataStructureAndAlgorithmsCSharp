@@ -14,10 +14,16 @@ namespace DSA.Tries
         {
             var current = Root;
             foreach(var character in word){
-                int index = character - 'a';
-                if (current.Children[index] == null)
-                    current.Children[index] = new TrieNode(character);
-                current = current.Children[index];
+
+                if (!current.Children.ContainsKey(character))
+                    current.Children.Add(character, new TrieNode(character));
+                current = current.Children[character];
+                /*
+                    int index = character - 'a';
+                    if (current.Children[index] == null)
+                        current.Children[index] = new TrieNode(character);
+                    current = current.Children[index];
+                */
             }
             current.IsEndOfWord = true;
         }
