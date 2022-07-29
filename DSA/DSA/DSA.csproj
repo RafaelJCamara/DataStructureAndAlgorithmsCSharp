@@ -16,6 +16,7 @@
     <None Remove="Trees\BinarySearchTree\Tests\" />
     <None Remove="Heaps\" />
     <None Remove="Heaps\Tests\" />
+    <None Remove="Tries\" />
   </ItemGroup>
   
   <ItemGroup>
@@ -26,6 +27,7 @@
     <Folder Include="Trees\BinarySearchTree\" />
     <Folder Include="Trees\BinarySearchTree\Tests\" />
     <Folder Include="Heaps\Tests\" />
+    <Folder Include="Tries\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />

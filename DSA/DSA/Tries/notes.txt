@@ -1,0 +1,10 @@
+﻿- Tries are also a kind of trees, but not binary trees, because one node can have more than two children.
+- The name Trie comes from Retrievel. Other names are Digital, Radix or Prefix trees.
+- Tries are used for auto-completion.
+- One migh ask why not using arrays. There are two main reasons why:
+    1. If we have a huge number of words, we will waste a lot of memory space, because many words will have the same prefix.
+    2. If we want to lookup words that starts the a prefix, this will take a lot of time.
+- There are three main operations we can perfom on tries:
+    1. Lookup: O(L), where L is the length of the word we are looking for.
+    2. Insert: O(L), where L is the length of the word we are inserting.
+    3. Delete: O(L), where L is the length of the word we are deleting.
