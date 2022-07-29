@@ -28,6 +28,19 @@ namespace DSA.Tries
             current.IsEndOfWord = true;
         }
 
+        public bool Contains(string word)
+        {
+            if (word == null) return false;
+
+            var current = Root;
+            foreach(var character in word)
+            {
+                if (!current.Children.ContainsKey(character)) return false;
+                current = current.Children[character];
+            }
+            return current.IsEndOfWord;
+        }
+
     }
 }
 
