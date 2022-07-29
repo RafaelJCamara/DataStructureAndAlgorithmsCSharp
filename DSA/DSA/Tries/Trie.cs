@@ -41,6 +41,29 @@ namespace DSA.Tries
             return current.IsEndOfWord;
         }
 
+        public void Traverse()
+        {
+            PreOrderTraversal(Root);
+        }
+
+        public void PreOrderTraversal(TrieNode root)
+        {
+            Console.WriteLine(root.Value);
+            foreach (var child in root.Children.Keys)
+            {
+                Console.WriteLine(child);
+            }
+        }
+
+        public void PostOrderTraversal(TrieNode root)
+        {
+            foreach (var child in root.Children.Keys)
+            {
+                Console.WriteLine(child);
+            }
+            Console.WriteLine(root.Value);
+        }
+
     }
 }
 
