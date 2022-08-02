@@ -64,6 +64,31 @@ namespace DSA.Tries
             Console.WriteLine(root.Value);
         }
 
+
+        public void Delete(string word)
+        {
+            if (word == null) return;
+            Delete(word, Root, 0);
+        }
+
+        public void Delete(string word, TrieNode root, int index)
+        {
+            if (index == word.Length)
+            {
+                root.IsEndOfWord = false;
+                return;
+            }
+
+            var child = root.Children[word.ToCharArray()[index]];
+            if (child == null) return;
+
+            Delete(word, child, index+1);
+            if (!child.IsEndOfWord && child.Children.Count==0)
+            {
+                root.Children.Remove(child.Value);
+            }
+        }
+
     }
 }
 
