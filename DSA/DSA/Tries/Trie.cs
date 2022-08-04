@@ -124,9 +124,11 @@ namespace DSA.Tries
         private bool ContainsRecursive(TrieNode node, string word, int index)
         {
             if (!node.Children.ContainsKey(word[index])) return false;
-            if (node.IsEndOfWord && index==word.Length) return true;
+            if (index==word.Length) return node.IsEndOfWord;
             return ContainsRecursive(node.Children[word[index]], word, index+1);
         }
+
+
 
     }
 }
