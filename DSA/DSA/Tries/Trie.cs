@@ -128,7 +128,24 @@ namespace DSA.Tries
             return ContainsRecursive(node.Children[word[index]], word, index+1);
         }
 
+        public int CountWords()
+        {
+            return CountWords(Root);
+        }
 
+        public int CountWords(TrieNode node)
+        {
+            if (node == null) return 0;
+
+            int count = 0;
+            if (node.IsEndOfWord) count += 1;
+
+            foreach (var children in node.Children.Keys) {
+                count += CountWords(node.Children[children]);
+            }
+
+            return count;
+        }
 
     }
 }
