@@ -89,6 +89,45 @@ namespace DSA.Tries
             }
         }
 
+        public List<string> FindWords(string word){
+            var list = new List<string>();
+            var current = Root;
+            foreach (var character in word)
+            {
+                current = current.Children[character];
+            }
+            FindWords(current, word, list);
+            return list;
+        }
+
+        public void FindWords(TrieNode root, string word, List<string> words)
+        {
+            if (root.IsEndOfWord)
+            {
+                words.Add(word);
+                return;
+            }
+
+            foreach (var child in root.Children.Keys)
+            {
+                var newWord = word + child;
+                FindWords(root.Children[child], newWord, words);
+            }
+        }
+
+        public bool ContainsRecursive(string word)
+        {
+            if (word == null) return false;
+            return ContainsRecursive(Root, word, 0);
+        }
+
+        private bool ContainsRecursive(TrieNode node, string word, int index)
+        {
+            if (!node.Children.ContainsKey(word[index])) return false;
+            if (node.IsEndOfWord && index==word.Length) return true;
+            return ContainsRecursive(node.Children[word[index]], word, index+1);
+        }
+
     }
 }
 
