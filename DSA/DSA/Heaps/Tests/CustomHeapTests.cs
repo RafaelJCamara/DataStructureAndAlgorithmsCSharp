@@ -67,6 +67,24 @@ namespace DSA.Heaps.Tests
             Assert.Equal(expectedFinalHeap, customHeap.Heap);
         }
 
+        [Theory]
+        [InlineData(new int[] { 40, 20, 30, 15, 17, 29, 28 }, true)]
+        [InlineData(new int[] { 40, 30, 20 }, true)]
+        [InlineData(new int[] { 30, 40, 35, 20, 15, 10, 22 }, false)]
+        [InlineData(new int[] { 20, 10, 15, 5, 3, 12, 13, 100 }, false)]
+        public void IsMaxHeap_ReturnsTrueIfArrayIsMaxHeapFalseOtherwise(int[] array, bool expectedIsMaxHeap)
+        {
+            //Arrange
+            var customHeap = new CustomHeap(array.Length);
+
+            //Act
+            var isMaxHeap = customHeap.IsMaxHeap(array);
+
+            //Assert
+            Assert.Equal(expectedIsMaxHeap, isMaxHeap);
+        }
+
+
         public static IEnumerable<object[]> TestInsertValueInHeapData
         {
             get
