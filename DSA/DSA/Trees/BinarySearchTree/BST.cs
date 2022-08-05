@@ -172,5 +172,39 @@ namespace DSA.Trees.BinarySearchTree
             return Max(Root.Right);
         }
 
+        public bool Contains(int value)
+        {
+            return Contains(Root, value);
+        }
+
+        public bool Contains(TreeNode root, int value)
+        {
+            if (root == null) return false;
+            if (root.Value == value) return true;
+            return root.Value > value ? Contains(root.Left, value) : Contains(root.Right, value);
+        }
+
+        public bool AreSibling(int value1, int value2)
+        {
+            return AreSibling(Root, value1, value2);
+        }
+
+        public bool AreSibling(TreeNode root, int value1, int value2)
+        {
+            if (root == null || (root.Left==null&&root.Right==null) ) return false;
+            if (
+                    root.Left.Value == value1 && root.Right.Value == value2 ||
+                    root.Left.Value == value2 && root.Right.Value == value1
+                ) return true;
+            return ValuesLessThanRoot(root.Value, value1, value2) ?
+                    AreSibling(root.Left, value1, value2) :
+                    AreSibling(root.Right, value1, value2);
+        }
+
+        private bool ValuesLessThanRoot(int root, int value1, int value2)
+        {
+            return value1 < root && value2 < root;
+        }
+
     }
 }
