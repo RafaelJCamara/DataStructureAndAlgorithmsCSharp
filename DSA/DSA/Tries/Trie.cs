@@ -100,7 +100,7 @@ namespace DSA.Tries
             return list;
         }
 
-        public void FindWords(TrieNode root, string word, List<string> words)
+        private void FindWords(TrieNode root, string word, List<string> words)
         {
             if (root.IsEndOfWord)
             {
