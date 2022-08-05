@@ -160,5 +160,17 @@ namespace DSA.Trees.BinarySearchTree
             return 1 + Size(root.Left) + Size(root.Right);
         }
 
+        public int Max()
+        {
+            if (Root == null) throw new InvalidOperationException("Root is null!");
+            return Max(Root.Right);
+        }
+
+        public int Max(TreeNode root)
+        {
+            if (root.Right==null) return root.Value;
+            return Max(Root.Right);
+        }
+
     }
 }
