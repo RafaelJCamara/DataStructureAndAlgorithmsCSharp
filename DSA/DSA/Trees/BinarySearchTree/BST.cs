@@ -136,5 +136,17 @@ namespace DSA.Trees.BinarySearchTree
             GetNodesAtDistanceFromRoot(root.Right, distance - 1, currentNodes);
         }
 
+        public int CountLeaves()
+        {
+            return CountLeaves(Root);
+        }
+
+        public int CountLeaves(TreeNode root)
+        {
+            if (root == null) return 0;
+            if (root.Left == null && root.Right == null) return 1;
+            return CountLeaves(root.Left) + CountLeaves(root.Right);
+        }
+
     }
 }
