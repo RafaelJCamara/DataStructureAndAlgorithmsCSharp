@@ -104,6 +104,24 @@ namespace DSA.Heaps
             return RightChild(parent) < Size;
         }
 
+        public bool IsMaxHeap(int[] array)
+        {
+            return IsMaxHeap(array, 0);
+        }
+
+        private bool IsMaxHeap(int[] array, int parent)
+        {
+            int leftChild = LeftChild(parent);
+            int rightChild = RightChild(parent);
+
+            if (leftChild > array.Length && rightChild > array.Length) return true;
+
+            if ( (leftChild < array.Length && array[parent] < array[leftChild]) ||
+                 (rightChild<array.Length && array[parent] < array[rightChild]) ) return false;
+
+            return IsMaxHeap(array, leftChild) && IsMaxHeap(array, rightChild);
+        }
+
     }
 }
 
