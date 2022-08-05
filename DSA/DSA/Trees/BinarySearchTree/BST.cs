@@ -148,5 +148,17 @@ namespace DSA.Trees.BinarySearchTree
             return CountLeaves(root.Left) + CountLeaves(root.Right);
         }
 
+        public int Size()
+        {
+            return Size(Root);
+        }
+
+        public int Size(TreeNode root)
+        {
+            if (root == null) return 0;
+            if (root.Left == null && root.Right == null) return 1;
+            return 1 + Size(root.Left) + Size(root.Right);
+        }
+
     }
 }
