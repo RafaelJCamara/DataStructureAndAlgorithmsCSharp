@@ -206,5 +206,20 @@ namespace DSA.Trees.BinarySearchTree
             return value1 < root && value2 < root;
         }
 
+        public List<int> Ancestors(int value)
+        {
+            if (Root == null) throw new InvalidOperationException("Root is null!");
+            var ancestors = new List<int>();
+            ancestors.Add(Root.Value);
+            return Root.Value > value? Ancestors(Root.Left, value, ancestors) : Ancestors(Root.Right, value, ancestors);
+        }
+
+        private List<int> Ancestors(TreeNode root, int value, List<int> ancestors)
+        {
+            if (root == null || root.Value==value) return ancestors;
+            ancestors.Add(root.Value);
+            return root.Value > value ? Ancestors(root.Left, value, ancestors) : Ancestors(root.Right, value, ancestors);
+        }
+
     }
 }
