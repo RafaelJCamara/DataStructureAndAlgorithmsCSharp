@@ -139,7 +139,23 @@ namespace DSA.HashTables
             return maxElement;
         }
 
-
+        /*
+            Two sum without using equal numbers
+         */
+        public int[] TwoSum(int[] array, int target)
+        {
+            Dictionary<int, int> hashmap = new Dictionary<int, int>();
+            for(int i = 0; i != array.Length; i++)
+            {
+                var complement = target - array[i];
+                if (hashmap.ContainsKey(complement) && complement != array[i])
+                {
+                    return new int[] { hashmap[complement], i};
+                }
+                hashmap[array[i]] = i;
+            }
+            return null;
+        }
 
     }
 }
