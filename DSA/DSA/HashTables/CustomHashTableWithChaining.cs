@@ -110,6 +110,29 @@ namespace DSA.HashTables
             return key % ArraySize;
         }
 
+        public static int MostFrequent(int[] array)
+        {
+            Dictionary<int, int> hashmap = new Dictionary<int, int>();
+            foreach(var num in array)
+            {
+                hashmap[num] = hashmap.GetValueOrDefault(num) + 1;
+            }
+
+            var maxElement = -1;
+            var mostRepeatedElementTimes = -1;
+
+            foreach(KeyValuePair<int,int> entry in hashmap)
+            {
+                if (entry.Value > mostRepeatedElementTimes)
+                {
+                    maxElement = entry.Key;
+                    mostRepeatedElementTimes = entry.Value;
+                }
+            }
+
+            return maxElement;
+        }
+
     }
 }
 

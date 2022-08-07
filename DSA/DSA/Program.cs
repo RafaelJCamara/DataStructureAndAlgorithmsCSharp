@@ -79,9 +79,14 @@ namespace DSA
             //heap.Insert(4);
             //heap.Remove();
 
+            /*
             int[] array = { 10, 20, 30, 40};
             MaxHeap.Heapify(array);
             Console.WriteLine("a");
+            */
+
+
+
         }
     }
 }
