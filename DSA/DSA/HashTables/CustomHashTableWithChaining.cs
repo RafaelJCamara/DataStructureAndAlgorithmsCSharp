@@ -110,6 +110,12 @@ namespace DSA.HashTables
             return key % ArraySize;
         }
 
+
+        /*
+            There's also another way of solving this, which is using a priority queue.
+            When inserting elements in the queue, they will be sorted based on their priority (which is the amount of times the element has occurred)
+            When ending this insertion, just Dequeue an element from the queue, and this element will be the element with highest priority, meaning the most amount of times it has occurred
+         */
         public static int MostFrequent(int[] array)
         {
             Dictionary<int, int> hashmap = new Dictionary<int, int>();
@@ -132,6 +138,8 @@ namespace DSA.HashTables
 
             return maxElement;
         }
+
+
 
     }
 }
