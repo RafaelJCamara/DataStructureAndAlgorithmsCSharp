@@ -157,6 +157,57 @@ namespace DSA.HashTables
             return null;
         }
 
+        /*
+         * Using HashTables
+         */
+        public int CountPairsWithDiff(int[] array, int diff)
+        {
+            Dictionary<int, List<int>> hashmap = new Dictionary<int, List<int>>();
+            int numPairs = 0;
+            foreach(var num in array)
+            {
+                int lowerBound = num-diff;
+                int higherBound = num+diff;
+                if (hashmap.ContainsKey(lowerBound))
+                {
+                    hashmap[lowerBound].Add(num);
+                }
+                if (hashmap.ContainsKey(higherBound))
+                {
+                    hashmap[higherBound].Add(num);
+                }
+                hashmap[num] = new List<int>();
+            }
+
+            foreach (var values in hashmap.Values)
+            {
+                numPairs += values.Count;
+            }
+
+            return numPairs;
+        }
+
+        /*
+            Using Sets
+         */
+        public int CountPairsWithDiff2(int[] array, int diff)
+        {
+            HashSet<int> set = new HashSet<int>();
+
+            foreach (var num in array) set.Add(num);
+
+            var count = 0;
+
+            foreach (var num in array)
+            {
+                if (set.Contains(num - diff)) count += 1;
+                if (set.Contains(num + diff)) count += 1;
+                set.Remove(num);
+            }
+
+            return count;
+        }
+
     }
 }
 
